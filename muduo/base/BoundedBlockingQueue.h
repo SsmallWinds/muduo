@@ -9,7 +9,7 @@
 #include "muduo/base/Condition.h"
 #include "muduo/base/Mutex.h"
 
-#include <boost/circular_buffer.hpp>
+#include "muduo/other/circular_buffer.h"
 #include <assert.h>
 
 namespace muduo
@@ -93,7 +93,7 @@ class BoundedBlockingQueue : noncopyable
   mutable MutexLock          mutex_;
   Condition                  notEmpty_ GUARDED_BY(mutex_);
   Condition                  notFull_ GUARDED_BY(mutex_);
-  boost::circular_buffer<T>  queue_ GUARDED_BY(mutex_);
+  muduo::circular_buffer<T>  queue_ GUARDED_BY(mutex_);
 };
 
 }  // namespace muduo

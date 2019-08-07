@@ -11,7 +11,10 @@ license that can be found in the License file.
 Requires:
   Linux kernel version >= 2.6.28.
   GCC >= 4.7 or Clang >= 3.5
-  Boost (for boost::any only.)
+
+Remove test and examples code ,remove depends of boost
+
+any and circualr_buffer from https://github.com/AlexStocks/muduo.git
 
 Tested on:
   Debian 7 and above
