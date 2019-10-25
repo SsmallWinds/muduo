@@ -63,13 +63,13 @@ namespace muduo
   }
 
   template<typename T>
-  circular_buffer<T>::circular_buffer(size_t capacity)
+  circular_buffer<T>::circular_buffer(size_t cap)
     : circular_buffer()
   {
-    if (capacity < 1) throw std::length_error("Invalid capacity");
+    if (cap < 1) throw std::length_error("Invalid capacity");
 
-    buffer_ = new T[capacity];
-    capacity_ = capacity;
+    buffer_ = new T[cap];
+    capacity_ = cap;
   }
 
   template<typename T>
