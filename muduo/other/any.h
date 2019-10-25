@@ -188,6 +188,10 @@ public:
     return assign(x);
   }
 
+  any& operator=(const any& x) {
+    return assign(x);
+  }
+
   /// Utility functions
   any& swap(any& x) {
     std::swap(policy, x.policy);
